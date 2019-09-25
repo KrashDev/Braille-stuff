@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My HTML Page</title>
+  <link rel="stylesheet" type="text/css" title="Cool stylesheet" href="style.css">
+</head>
+<body>
+  <div class="main">
+    <h1>Braille Me</h1>
+    <h2>A place to translate text into Braille</h2>
+    <p>Just enter your text below and hit the submit button</p>
+    <div class="controls">
+      <input class="braille-input"></input>
+      <button class="submit">Braille It</button>
+      <button class="clear">Clear It</button>
+    </div>
+    <hr>
+    <!-- <img class="braille-img" src="braille-letters/a.png"> -->
+    <div class="braille-output"></div>
+
+    <p>For a different braille experience click this link:
+      <a class="alternate-page" href="index.html">Braille as text</a>
+    </p>
+
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+
+  <script>
+  $( document ).ready(function() {
+
+    //clear braille images and input field contents
+    $('button.clear').click(function(){
+      $('input.braille-input').val('');
+      $('.braille-output img').remove();
+    });
+
+    //grab value of braille input field
+    $('button.submit').click(function(){
+      var text = $('input.braille-input').val();
+
+      //split characters into array
+      var chars = text.split('');
+      console.log(chars);
+
+      var a = {
+        image: "braille-letters/a.png",
+        alt: "a"
+      }
+      var b = {
+        image: "braille-letters/b.png",
+        alt: "b"
+      }
+      var c = {
+        image: "braille-letters/c.png",
+        alt: "c"
+      }
+      var d = {
+        image: "braille-letters/d.png",
+        alt: "d"
+      }
+      var e = {
+        image: "braille-letters/e.png",
+        alt: "e"
+      }
+      var f = {
+        image: "braille-letters/f.png",
+        alt: "f"
+      }
+      var g = {
+        image: "braille-letters/g.png",
+        alt: "g"
+      }
+      var h = {
+        image: "braille-letters/h.png",
+        alt: "h"
+      }
+      var i = {
+        image: "braille-letters/i.png",
+        alt: "i"
+      }
+      var j = {
+        image: "braille-letters/j.png",
+        alt: "j"
+      }
+      var k = {
+        image: "braille-letters/k.png",
+        alt: "k"
+      }
+      var l = {
+        image: "braille-letters/l.png",
+        alt: "l"
+      }
+      var m = {
+        image: "braille-letters/m.png",
+        alt: "m"
+      }
+      var n = {
+        image: "braille-letters/n.png",
+        alt: "n"
+      }
+      var o = {
+        image: "braille-letters/o.png",
+        alt: "o"
+      }
+      var p = {
+        image: "braille-letters/p.png",
+        alt: "p"
+      }
+      var q = {
+        image: "braille-letters/q.png",
+        alt: "q"
+      }
+      var r = {
+        image: "braille-letters/r.png",
+        alt: "r"
+      }
+      var s = {
+        image: "braille-letters/s.png",
+        alt: "s"
+      }
+      var t = {
+        image: "braille-letters/t.png",
+        alt: "t"
+      }
+      var u = {
+        image: "braille-letters/u.png",
+        alt: "u"
+      }
+      var v = {
+        image: "braille-letters/v.png",
+        alt: "v"
+      }
+      var w = {
+        image: "braille-letters/w.png",
+        alt: "w"
+      }
+      var x = {
+        image: "braille-letters/x.png",
+        alt: "x"
+      }
+      var y = {
+        image: "braille-letters/y.png",
+        alt: "y"
+      }
+      var z = {
+        image: "braille-letters/z.png",
+        alt: "z"
+      }
+
+      // Terminix
+      // 23rd from 3pm-5pm
+
+      chars.forEach(item => {
+        if (item == ' ') {
+          $('.braille-output').append('<p>&nbsp&nbsp&nbsp</p>');
+        }
+        if (item == 'a') {
+          $('.braille-output').append('<img alt=' + a.alt +' src=' + a.image + '>');
+        }
+        if (item == 'b') {
+          $('.braille-output').append('<img alt=' + b.alt +' src=' + b.image + '>');
+        }
+        if (item == 'c') {
+          $('.braille-output').append('<img alt=' + c.alt +' src=' + c.image + '>');
+        }
+        if (item == 'd') {
+          $('.braille-output').append('<img alt=' + d.alt +' src=' + d.image + '>');
+        }
+        if (item == 'e') {
+          $('.braille-output').append('<img alt=' + e.alt +' src=' + e.image + '>');
+        }
+        if (item == 'f') {
+          $('.braille-output').append('<img alt=' + f.alt +' src=' + f.image + '>');
+        }
+        if (item == 'g') {
+          $('.braille-output').append('<img alt=' + g.alt +' src=' + g.image + '>');
+        }
+        if (item == 'h') {
+          $('.braille-output').append('<img alt=' + h.alt +' src=' + h.image + '>');
+        }
+        if (item == 'i') {
+          $('.braille-output').append('<img alt=' + i.alt +' src=' + i.image + '>');
+        }
+        if (item == 'j') {
+          $('.braille-output').append('<img alt=' + j.alt +' src=' + j.image + '>');
+        }
+        if (item == 'k') {
+          $('.braille-output').append('<img alt=' + k.alt +' src=' + k.image + '>');
+        }
+        if (item == 'l') {
+          $('.braille-output').append('<img alt=' + l.alt +' src=' + l.image + '>');
+        }
+        if (item == 'm') {
+          $('.braille-output').append('<img alt=' + m.alt +' src=' + m.image + '>');
+        }
+        if (item == 'n') {
+          $('.braille-output').append('<img alt=' + n.alt +' src=' + n.image + '>');
+        }
+        if (item == 'o') {
+          $('.braille-output').append('<img alt=' + o.alt +' src=' + o.image + '>');
+        }
+        if (item == 'p') {
+          $('.braille-output').append('<img alt=' + p.alt +' src=' + p.image + '>');
+        }
+        if (item == 'q') {
+          $('.braille-output').append('<img alt=' + q.alt +' src=' + q.image + '>');
+        }
+        if (item == 'r') {
+          $('.braille-output').append('<img alt=' + r.alt +' src=' + r.image + '>');
+        }
+        if (item == 's') {
+          $('.braille-output').append('<img alt=' + s.alt +' src=' + s.image + '>');
+        }
+        if (item == 't') {
+          $('.braille-output').append('<img alt=' + t.alt +' src=' + t.image + '>');
+        }
+        if (item == 'u') {
+          $('.braille-output').append('<img alt=' + u.alt +' src=' + u.image + '>');
+        }
+        if (item == 'v') {
+          $('.braille-output').append('<img alt=' + v.alt +' src=' + v.image + '>');
+        }
+        if (item == 'w') {
+          $('.braille-output').append('<img alt=' + w.alt +' src=' + w.image + '>');
+        }
+        if (item == 'x') {
+          $('.braille-output').append('<img alt=' + x.alt +' src=' + x.image + '>');
+        }
+        if (item == 'y') {
+          $('.braille-output').append('<img alt=' + y.alt +' src=' + y.image + '>');
+        }
+        if (item == 'z') {
+          $('.braille-output').append('<img alt=' + z.alt +' src=' + z.image + '>');
+        }
+      });
+
+
+
+    });
+  });
+  </script>
+
+  <style>
+
+  .main {
+    text-align:center;
+  }
+
+  hr {
+    width: 500px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+  }
+
+  .braille-output img, .braille-output p {
+    height: 50px;
+    display: inline;
+  }
+
+</style>
+
+</body>
+</html>
